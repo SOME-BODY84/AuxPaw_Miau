@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NYAN Core
+Comment=Connect to the NYAN P2P Network
+Comment[de]=Verbinde mit dem NYAN peer-to-peer Netzwerk
+Comment[fr]=NYAN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=NYAN, eşten eşe kriptografik sanal para birimi
+Exec=nyan-qt %u
+Terminal=false
+Type=Application
+Icon=nyan128
+MimeType=x-scheme-handler/nyan;
+Categories=Office;Finance;

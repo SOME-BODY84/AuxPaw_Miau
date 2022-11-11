@@ -1,0 +1,22 @@
+[Unit]
+Description=NYAN's distributed currency daemon
+After=network.target
+
+[Service]
+User=nyan
+Group=nyan
+
+Type=forking
+PIDFile=/var/lib/nyand/nyand.pid
+ExecStart=/usr/bin/nyand -daemon -pid=/var/lib/nyand/nyand.pid \
+-conf=/etc/nyan/nyan.conf -datadir=/var/lib/nyand -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
